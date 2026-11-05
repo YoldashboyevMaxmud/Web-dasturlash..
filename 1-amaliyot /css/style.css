@@ -1,1 +1,143 @@
+/* ==========================================================
+   Ta'lim va kitoblar — style.css
+   Muallif: Yo'ldashboyev Maxmud, 943-24 guruh
+   Faqat matn ko'rinishi: rang, shrift, matn xossalari
+   ========================================================== */
 
+/* ---------- Ranglar palitrasi (4 ta rang) ---------- */
+:root {
+  --asosiy: #1f3a5f;   /* to'q ko'k */
+  --aksent: #9a6700;   /* to'q oltin */
+  --fon:    #f7f3ea;   /* krem */
+  --matn:   #222222;   /* deyarli qora */
+}
+
+/* ---------- Sahifa umumiy ko'rinishi ---------- */
+body {
+  font-family: 'Roboto', Arial, sans-serif;   /* zaxira shriftlar bilan */
+  font-size: 17px;
+  line-height: 1.7;
+  background-color: var(--fon);
+  color: var(--matn);
+}
+
+/* ---------- Sarlavhalar ---------- */
+h1 {                                  /* teg selektori */
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 1px;
+  color: white;                       /* rang nomi bilan */
+}
+
+h2, h3 {                              /* guruhlangan selektor */
+  font-family: 'Merriweather', Georgia, serif;
+  color: var(--asosiy);
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: 1.05rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--aksent);
+}
+
+/* ---------- Header va footer ---------- */
+header {
+  background-color: var(--asosiy);    /* HEX orqali */
+  text-align: center;
+}
+
+footer {
+  background-color: rgba(31, 58, 95, 0.1);   /* rgba() orqali */
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* ---------- Matn elementlari ---------- */
+p {                                   /* teg selektori */
+  text-align: justify;
+}
+
+.izoh {                               /* class selektori */
+  font-style: italic;
+  font-size: 0.95rem;
+  color: rgba(34, 34, 34, 0.75);
+}
+
+header .izoh {
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+#aloqa, #muallif {                    /* id selektor */
+  background-color: rgba(31, 58, 95, 0.08);
+}
+
+strong {
+  font-weight: 700;
+  color: var(--asosiy);
+}
+
+em {
+  font-style: italic;
+}
+
+mark {
+  background-color: rgba(154, 103, 0, 0.25);
+  color: var(--matn);
+}
+
+abbr {
+  text-decoration: underline dotted;
+}
+
+blockquote {
+  font-family: 'Merriweather', Georgia, serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--asosiy);
+}
+
+/* ---------- Ro'yxatlar ---------- */
+dt {
+  font-weight: 700;
+  text-transform: capitalize;
+  color: var(--asosiy);
+}
+
+dd {
+  line-height: 1.6;
+}
+
+/* ---------- Havolalar ---------- */
+nav a {                               /* avlod selektori */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+a {                                   /* oddiy holat */
+  color: var(--asosiy);
+  text-decoration: underline;
+}
+
+a:hover {                             /* sichqoncha ustida */
+  color: var(--aksent);
+  text-decoration: none;
+}
+
+a:visited {                           /* ko'rilgan havola */
+  color: var(--matn);
+}
