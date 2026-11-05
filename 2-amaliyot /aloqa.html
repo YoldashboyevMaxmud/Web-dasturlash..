@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tavsiya etilgan kitoblar — Ta'lim va kitoblar</title>
-  <meta name="description" content="Tavsiya etilgan kitoblar jadvali, mualliflar va nashr yillari.">
+  <title>Aloqa — Ta'lim va kitoblar</title>
+  <meta name="description" content="Kitobxonlar to'garagiga ariza berish formasi va Urganchdagi manzil xaritasi.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -13,8 +13,8 @@
 <body>
 
   <header id="top">
-    <h1>Tavsiya etilgan kitoblar</h1>
-    <p class="izoh">Klassik va ilmiy asarlar</p>
+    <h1>Aloqa va ariza</h1>
+    <p class="izoh">Kitobxonlar to'garagiga yoziling</p>
   </header>
 
   <!-- Navigatsiya (bir xil skelet) -->
@@ -32,71 +32,97 @@
   <main class="konteyner">
 
     <section>
-      <h2>Kitoblar jadvali</h2>
+      <h2>To'garakka ariza</h2>
       <article class="karta">
-        <div class="jadval-orami">
-          <table>
-            <caption>Tavsiya etilgan kitoblar ro'yxati</caption>
-            <thead>
-              <tr>
-                <th scope="col">Muallif</th>
-                <th scope="col">Kitob</th>
-                <th scope="col">Nashr yili</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row" rowspan="2">Abdulla Qodiriy</th>
-                <td>O'tkan kunlar</td>
-                <td>1925&ndash;1926</td>
-              </tr>
-              <tr>
-                <td>Mehrobdan chayon</td>
-                <td>1929</td>
-              </tr>
-              <tr>
-                <th scope="row">Alisher Navoiy</th>
-                <td>Xamsa</td>
-                <td>1483&ndash;1485</td>
-              </tr>
-              <tr>
-                <th scope="row">Abdulla Qahhor</th>
-                <td>Sarob</td>
-                <td>1937</td>
-              </tr>
-              <tr>
-                <th scope="row">Antuan de Sent-Ekzyuperi</th>
-                <td>Kichkina shahzoda</td>
-                <td>1943</td>
-              </tr>
-              <tr>
-                <th scope="row">Muhammad al-Xorazmiy</th>
-                <td>Al-jabr val-muqobala</td>
-                <td>IX asr</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td colspan="3">Jami: 6 ta kitob, 5 nafar muallif</td>
-              </tr>
-            </tfoot>
-          </table>
-        </div>
+        <form action="#" method="post">
+
+          <div class="maydon">
+            <label for="ism">To'liq ism</label>
+            <input type="text" id="ism" name="ism" placeholder="Ism va familiya" required>
+          </div>
+
+          <div class="maydon">
+            <label for="email">Elektron pochta</label>
+            <input type="email" id="email" name="email" placeholder="ism@pochta.uz" required>
+          </div>
+
+          <div class="maydon">
+            <label for="tel">Telefon</label>
+            <input type="tel" id="tel" name="tel" placeholder="+998901234567" pattern="\+998[0-9]{9}" title="Format: +998901234567" required>
+          </div>
+
+          <div class="maydon">
+            <label for="yosh">Yosh</label>
+            <input type="number" id="yosh" name="yosh" min="10" max="80">
+          </div>
+
+          <div class="maydon">
+            <label for="sana">Tug'ilgan sana</label>
+            <input type="date" id="sana" name="sana">
+          </div>
+
+          <fieldset>
+            <legend>Qatnashish shakli</legend>
+            <div class="qator">
+              <div class="variant">
+                <input type="radio" id="onlayn" name="shakl" value="onlayn" checked>
+                <label for="onlayn">Onlayn</label>
+              </div>
+              <div class="variant">
+                <input type="radio" id="oflayn" name="shakl" value="oflayn">
+                <label for="oflayn">Oflayn</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="maydon">
+            <label for="janr">Sevimli janr</label>
+            <select id="janr" name="janr">
+              <option value="badiiy">Badiiy adabiyot</option>
+              <option value="ilmiy">Ilmiy-ommabop</option>
+              <option value="tarix">Tarix</option>
+            </select>
+          </div>
+
+          <fieldset>
+            <legend>Qiziqishlar</legend>
+            <div class="qator">
+              <div class="variant">
+                <input type="checkbox" id="q-roman" name="qiziqish" value="roman">
+                <label for="q-roman">Romanlar</label>
+              </div>
+              <div class="variant">
+                <input type="checkbox" id="q-doston" name="qiziqish" value="doston">
+                <label for="q-doston">Dostonlar</label>
+              </div>
+              <div class="variant">
+                <input type="checkbox" id="q-fan" name="qiziqish" value="fan">
+                <label for="q-fan">Fan tarixi</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="maydon">
+            <label for="xabar">Nima uchun qatnashmoqchisiz?</label>
+            <textarea id="xabar" name="xabar" rows="4"></textarea>
+          </div>
+
+          <div class="variant">
+            <input type="checkbox" id="rozilik" name="rozilik" required>
+            <label for="rozilik">Ma'lumotlarim ishlatilishiga roziman</label>
+          </div>
+
+          <button type="submit">Ariza yuborish</button>
+        </form>
       </article>
     </section>
 
     <section>
-      <h2>Rasmlar</h2>
-      <div class="rasmlar">
-        <figure>
-          <img src="images/kitob-javoni.jpg" alt="Kitob javonida turli rangdagi kitoblar qatori" width="800" height="500">
-          <figcaption>1-rasm. Kitob javoni (namunaviy tasvir).</figcaption>
-        </figure>
-        <figure>
-          <img src="images/xorazmiy-tenglama.jpg" alt="Al-Xorazmiy tenglamasi x kvadrat plyus 10x teng 39 yozilgan kartochka" width="800" height="500">
-          <figcaption>2-rasm. Al-Xorazmiyning mashhur tenglamasi.</figcaption>
-        </figure>
-      </div>
+      <h2>Bizning manzil</h2>
+      <article class="karta">
+        <p>Urganch shahri, Hamid Olimjon ko'chasi, 14-uy. Telefon: <a href="tel:+998622246800">+998 62 224 68 00</a>.</p>
+        <iframe src="https://www.google.com/maps?q=Urganch+davlat+universiteti&output=embed" title="Urganch davlat universiteti xaritadagi joylashuvi" loading="lazy"></iframe>
+      </article>
     </section>
   </main>
 
