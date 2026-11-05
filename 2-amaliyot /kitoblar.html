@@ -1,1 +1,120 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tavsiya etilgan kitoblar — Ta'lim va kitoblar</title>
+  <meta name="description" content="Tavsiya etilgan kitoblar jadvali, mualliflar va nashr yillari.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
+  <header id="top">
+    <h1>Tavsiya etilgan kitoblar</h1>
+    <p class="izoh">Klassik va ilmiy asarlar</p>
+  </header>
+
+  <!-- Navigatsiya (bir xil skelet) -->
+  <nav>
+    <div class="konteyner nav-ichki">
+      <a class="logo" href="index.html">Ta'lim va kitoblar</a>
+      <ul>
+        <li><a href="index.html">Bosh sahifa</a></li>
+        <li><a href="kitoblar.html">Kitoblar</a></li>
+        <li><a href="aloqa.html">Aloqa</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="konteyner">
+
+    <section>
+      <h2>Kitoblar jadvali</h2>
+      <article class="karta">
+        <div class="jadval-orami">
+          <table>
+            <caption>Tavsiya etilgan kitoblar ro'yxati</caption>
+            <thead>
+              <tr>
+                <th scope="col">Muallif</th>
+                <th scope="col">Kitob</th>
+                <th scope="col">Nashr yili</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" rowspan="2">Abdulla Qodiriy</th>
+                <td>O'tkan kunlar</td>
+                <td>1925&ndash;1926</td>
+              </tr>
+              <tr>
+                <td>Mehrobdan chayon</td>
+                <td>1929</td>
+              </tr>
+              <tr>
+                <th scope="row">Alisher Navoiy</th>
+                <td>Xamsa</td>
+                <td>1483&ndash;1485</td>
+              </tr>
+              <tr>
+                <th scope="row">Abdulla Qahhor</th>
+                <td>Sarob</td>
+                <td>1937</td>
+              </tr>
+              <tr>
+                <th scope="row">Antuan de Sent-Ekzyuperi</th>
+                <td>Kichkina shahzoda</td>
+                <td>1943</td>
+              </tr>
+              <tr>
+                <th scope="row">Muhammad al-Xorazmiy</th>
+                <td>Al-jabr val-muqobala</td>
+                <td>IX asr</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="3">Jami: 6 ta kitob, 5 nafar muallif</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </article>
+    </section>
+
+    <section>
+      <h2>Rasmlar</h2>
+      <div class="rasmlar">
+        <figure>
+          <img src="images/kitob-javoni.jpg" alt="Kitob javonida turli rangdagi kitoblar qatori" width="800" height="500">
+          <figcaption>1-rasm. Kitob javoni (namunaviy tasvir).</figcaption>
+        </figure>
+        <figure>
+          <img src="images/xorazmiy-tenglama.jpg" alt="Al-Xorazmiy tenglamasi x kvadrat plyus 10x teng 39 yozilgan kartochka" width="800" height="500">
+          <figcaption>2-rasm. Al-Xorazmiyning mashhur tenglamasi.</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="konteyner footer-ichki">
+      <div>
+        <p>&copy; 2026 Ta'lim va kitoblar</p>
+        <p class="izoh">Yo'ldashboyev Maxmud, 943-24 guruh</p>
+      </div>
+      <div>
+        <p>Manzil: Urganch shahri, Hamid Olimjon ko'chasi, 14-uy</p>
+        <p><a href="mailto:info@urdu.uz">info@urdu.uz</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Yuqoriga tugmasi (position: fixed) -->
+  <a class="yuqoriga" href="#top">&uarr; Yuqoriga</a>
+
+</body>
+</html>
