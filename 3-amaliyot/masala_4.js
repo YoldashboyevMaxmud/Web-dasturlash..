@@ -1,23 +1,24 @@
 //4-masala. Berilgan so'zdagi eng ko'p qatnashgan harfni qaytarish.
+// Matn ichida eng ko'p qatnashgan harfni topadi, bir nechta bo'lsa birinchisini qaytaradi.
 function engKopUchraganHarf(s) {
-    let maxHarf = '';
-    let maxSoni = 0;
+    let engKopHarf = '';
+    let maxTakrorSoni = 0;
     
     for (let i = 0; i < s.length; i++) {
-        let harf = s[i];
-        let joriySoni = 0;
+        let joriyHarf = s[i];
+        let sanashSoni = 0;
         
         for (let j = 0; j < s.length; j++) {
-            if (s[j] === harf) {
-                joriySoni++;
+            if (s[j] === joriyHarf) {
+                sanashSoni++;
             }
         }
         
-        if (joriySoni > maxSoni) {
-            maxSoni = joriySoni;
-            maxHarf = harf;
+        if (sanashSoni > maxTakrorSoni) {
+            maxTakrorSoni = sanashSoni;
+            engKopHarf = joriyHarf;
         }
     }
     
-    return maxHarf;
+    return engKopHarf;
 }
